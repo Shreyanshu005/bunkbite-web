@@ -1,0 +1,99 @@
+.support-section {
+  background: var(--bg-light);
+}
+
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.support-card {
+  background: var(--white);
+  padding: 32px 24px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.support-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.support-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: var(--white);
+  border-radius: 16px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.support-card:hover .support-icon {
+  transform: scale(1.1);
+}
+
+.support-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+
+.support-description {
+  color: var(--text-gray);
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.support-email {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.support-card:hover .support-email {
+  color: var(--primary-dark);
+}
+
+.response-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 24px;
+  background: var(--white);
+  border-radius: 12px;
+  color: var(--text-gray);
+  font-weight: 500;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.response-time svg {
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .support-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .support-card {
+    padding: 24px 20px;
+  }
+}

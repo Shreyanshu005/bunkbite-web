@@ -1,0 +1,243 @@
+.contact-section {
+  background: var(--bg-light);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: var(--white);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: var(--white);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.contact-item h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--text-dark);
+}
+
+.contact-item p,
+.contact-item a {
+  color: var(--text-gray);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.contact-item a {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.contact-item a:hover {
+  color: var(--primary-dark);
+}
+
+.download-section {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.download-section h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text-dark);
+}
+
+.download-section > p {
+  color: var(--text-gray);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.download-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.download-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: var(--text-dark);
+  color: var(--white);
+}
+
+.download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.download-btn div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.download-btn .small {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.download-btn .large {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.app-mockup {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.mockup-glow {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%);
+  opacity: 0.2;
+  border-radius: 50%;
+  filter: blur(40px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.3;
+  }
+}
+
+.mockup-phone {
+  position: relative;
+  width: 180px;
+  height: 360px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  border-radius: 30px;
+  padding: 8px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.mockup-screen {
+  width: 100%;
+  height: 100%;
+  background: #f8f9fa;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+}
+
+.mockup-notch {
+  width: 80px;
+  height: 20px;
+  background: #000;
+  border-radius: 0 0 10px 10px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mockup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 30px 20px;
+}
+
+.mockup-app-icon {
+  font-size: 60px;
+  margin-bottom: 12px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.mockup-text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+@media (max-width: 968px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .download-section {
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-item {
+    padding: 20px;
+  }
+
+  .download-section h3 {
+    font-size: 1.6rem;
+  }
+
+  .mockup-phone {
+    width: 150px;
+    height: 300px;
+  }
+
+  .mockup-app-icon {
+    font-size: 48px;
+  }
+}
