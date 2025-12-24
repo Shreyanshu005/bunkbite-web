@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="135" height="40" viewBox="0 0 135 40">
+  <g fill="none">
+    <rect width="135" height="40" rx="5" fill="#000"/>
+    <g transform="translate(10, 8)">
+      <path d="M1.004 0.248C0.965 0.32 0.945 0.417 0.945 0.54v22.92c0 0.123 0.02 0.22 0.059 0.292l0.023 0.023L13.5 11.302v-0.604L1.027 0.225L1.004 0.248z" fill="url(#a)"/>
+      <path d="M17.657 15.46l-4.157-4.158v-0.604l4.157-4.157 0.046 0.026 4.924 2.798c1.407 0.798 1.407 2.106 0 2.904l-4.924 2.798-0.046 0.026z" fill="url(#b)"/>
+      <path d="M17.703 15.434L13.5 11.23 1.004 23.726c0.463 0.491 1.228 0.553 2.099 0.098l14.6-8.39" fill="url(#c)"/>
+      <path d="M17.703 7.026L3.103 -1.364c-0.871-0.455-1.636-0.393-2.099 0.098L13.5 11.23l4.203-4.204z" fill="url(#d)"/>
+    </g>
+    <defs>
+      <linearGradient id="a" x1="12.25" y1="1.58" x2="-3.75" y2="17.58" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#00A0FF"/>
+        <stop offset="0.007" stop-color="#00A1FF"/>
+        <stop offset="0.26" stop-color="#00BEFF"/>
+        <stop offset="0.512" stop-color="#00D2FF"/>
+        <stop offset="0.76" stop-color="#00DFFF"/>
+        <stop offset="1" stop-color="#00E3FF"/>
+      </linearGradient>
+      <linearGradient id="b" x1="24.827" y1="11.5" x2="0.173" y2="11.5" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FFE000"/>
+        <stop offset="0.409" stop-color="#FFBD00"/>
+        <stop offset="0.775" stop-color="#FFA500"/>
+        <stop offset="1" stop-color="#FF9C00"/>
+      </linearGradient>
+      <linearGradient id="c" x1="15.588" y1="13.21" x2="-5.162" y2="33.96" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FF3A44"/>
+        <stop offset="1" stop-color="#C31162"/>
+      </linearGradient>
+      <linearGradient id="d" x1="-2.101" y1="-7.29" x2="9.149" y2="3.96" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#32A071"/>
+        <stop offset="0.069" stop-color="#2DA771"/>
+        <stop offset="0.476" stop-color="#15CF74"/>
+        <stop offset="0.801" stop-color="#06E775"/>
+        <stop offset="1" stop-color="#00F076"/>
+      </linearGradient>
+    </defs>
+    <text x="40" y="13" fill="#fff" font-family="Arial, sans-serif" font-size="9" font-weight="400">GET IT ON</text>
+    <text x="40" y="26" fill="#fff" font-family="Arial, sans-serif" font-size="13" font-weight="600">Google Play</text>
+  </g>
+</svg>

@@ -2,11 +2,12 @@
   background: var(--bg-light);
 }
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
+.download-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .contact-info {
@@ -73,6 +74,7 @@
   border-radius: 20px;
   box-shadow: var(--shadow-md);
   text-align: center;
+  width: 100%;
 }
 
 .download-section h3 {
@@ -82,7 +84,7 @@
   color: var(--text-dark);
 }
 
-.download-section > p {
+.download-section>p {
   color: var(--text-gray);
   margin-bottom: 32px;
   line-height: 1.6;
@@ -93,40 +95,72 @@
   flex-direction: column;
   gap: 16px;
   margin-bottom: 40px;
-}
-
-.download-btn {
-  display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 16px 24px;
-  border-radius: 12px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  background: var(--text-dark);
-  color: var(--white);
 }
 
-.download-btn:hover {
+.download-buttons a {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  display: inline-block;
+}
+
+.download-buttons a:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
+  opacity: 0.9;
 }
 
-.download-btn div {
+.store-badge-large {
+  height: 60px;
+  width: auto;
+}
+
+.coming-soon-card {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  background: var(--bg-light);
+  border-radius: 12px;
+  border: 2px dashed #ddd;
+  width: 100%;
 }
 
-.download-btn .small {
-  font-size: 0.75rem;
-  opacity: 0.8;
+.coming-soon-content {
+  text-align: center;
+  width: 100%;
 }
 
-.download-btn .large {
-  font-size: 1.2rem;
-  font-weight: 600;
+.coming-soon-label {
+  display: inline-block;
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.direct-download {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  margin: 8px 0 0 0;
+}
+
+.apk-link {
+  color: var(--primary-color);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid var(--primary-color);
+  transition: all 0.3s ease;
+  padding-bottom: 1px;
+}
+
+.apk-link:hover {
+  color: var(--primary-dark);
+  border-bottom-color: var(--primary-dark);
 }
 
 .app-mockup {
@@ -151,10 +185,13 @@
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(-50%, -50%) scale(1);
     opacity: 0.2;
   }
+
   50% {
     transform: translate(-50%, -50%) scale(1.1);
     opacity: 0.3;
@@ -201,7 +238,9 @@
 }
 
 .mockup-app-icon {
-  font-size: 60px;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
   margin-bottom: 12px;
   animation: float 3s ease-in-out infinite;
 }
@@ -213,11 +252,6 @@
 }
 
 @media (max-width: 968px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
   .download-section {
     padding: 32px 24px;
   }
@@ -238,6 +272,7 @@
   }
 
   .mockup-app-icon {
-    font-size: 48px;
+    width: 48px;
+    height: 48px;
   }
 }

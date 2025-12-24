@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import logo from '../assets/bunkbite_logo.png';
 import './Header.css';
 
 const Header = () => {
@@ -29,7 +30,7 @@ const Header = () => {
       <div className="container">
         <div className="header-content">
           <Link to="/" className="logo">
-            <span className="logo-icon">🍔</span>
+            <img src={logo} alt="BunkBite Logo" className="logo-icon" />
             <span className="logo-text">BunkBite</span>
           </Link>
 
