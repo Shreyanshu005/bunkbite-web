@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail, Github, Twitter, Linkedin } from 'lucide-react';
+import logo from '../assets/bunkbite_logo.png';
 import './Footer.css';
 
 const Footer = () => {
@@ -11,7 +12,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-section">
             <div className="footer-logo">
-              <span className="logo-icon">🍔</span>
+              <img src={logo} alt="BunkBite Logo" className="logo-icon" />
               <span className="logo-text">BunkBite</span>
             </div>
             <p className="footer-description">
@@ -34,23 +35,10 @@ const Footer = () => {
             <ul className="footer-links">
               <li><Link to="/privacy">Privacy Policy</Link></li>
               <li><Link to="/terms">Terms of Service</Link></li>
-              <li><a href="mailto:support@bunkbite.me">Support</a></li>
             </ul>
           </div>
 
-          <div className="footer-section">
-            <h4>Contact</h4>
-            <ul className="footer-links">
-              <li>
-                <a href="mailto:support@bunkbite.me">
-                  <Mail size={16} />
-                  support@bunkbite.me
-                </a>
-              </li>
-              <li>Bengaluru, Karnataka</li>
-              <li>India - 560001</li>
-            </ul>
-          </div>
+
         </div>
 
         <div className="footer-bottom">

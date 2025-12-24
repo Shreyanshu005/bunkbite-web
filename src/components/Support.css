@@ -58,33 +58,30 @@
   line-height: 1.5;
 }
 
-.support-email {
+.support-action {
   color: var(--primary-color);
   font-weight: 600;
   font-size: 0.95rem;
   transition: all 0.3s ease;
 }
 
-.support-card:hover .support-email {
+.support-card:hover .support-action {
   color: var(--primary-dark);
 }
 
-.response-time {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+.support-cta {
+  text-align: center;
   padding: 16px 24px;
   background: var(--white);
   border-radius: 12px;
-  color: var(--text-gray);
-  font-weight: 500;
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
-.response-time svg {
-  color: var(--primary-color);
+.support-cta p {
+  color: var(--text-gray);
+  font-weight: 500;
+  margin: 0;
 }
 
 @media (max-width: 768px) {

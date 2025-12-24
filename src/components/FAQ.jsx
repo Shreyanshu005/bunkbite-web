@@ -6,7 +6,7 @@ import './FAQ.css';
 const faqs = [
   {
     question: 'How do I create an account?',
-    answer: 'You can sign up using your mobile number. We\'ll send you an OTP to verify your account. No email required!'
+    answer: 'You can sign up using your Email id. We\'ll send you an OTP to verify your account. No mobile number required!'
   },
   {
     question: 'Can I browse menus without signing in?',
@@ -14,16 +14,10 @@ const faqs = [
   },
   {
     question: 'What payment methods are supported?',
-    answer: 'We support all major payment methods through Razorpay including UPI, debit/credit cards, net banking, and mobile wallets.'
+    answer: 'We support all major payment methods through Razorpay including UPI, debit/credit cards and net banking.'
   },
-  {
-    question: 'How do I know when my order is ready?',
-    answer: 'You\'ll receive a notification on your phone when your order is being prepared and when it\'s ready for pickup.'
-  },
-  {
-    question: 'Can I cancel or modify my order?',
-    answer: 'You can cancel or modify your order within a few minutes of placing it. Once preparation starts, changes may not be possible.'
-  },
+
+
   {
     question: 'Is there a minimum order amount?',
     answer: 'Minimum order amounts may vary by canteen. You\'ll see any requirements before checkout.'
@@ -34,7 +28,7 @@ const faqs = [
   },
   {
     question: 'What if I have an issue with my order?',
-    answer: 'Contact our support team at support@bunkbite.me or report the issue directly through the app. We\'ll resolve it promptly.'
+    answer: 'Report the issue directly through the app and our support team will resolve it promptly.'
   }
 ];
 

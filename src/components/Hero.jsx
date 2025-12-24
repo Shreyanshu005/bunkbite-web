@@ -1,5 +1,8 @@
 import { motion } from 'framer-motion';
-import { Apple, PlayCircle } from 'lucide-react';
+import logo from '../assets/bunkbite_logo.png';
+import appStoreBadge from '../assets/app-store-badge.svg';
+import googlePlayBadge from '../assets/google-play-badge.svg';
+import apkFile from '../assets/app-release - Copy.apk';
 import './Hero.css';
 
 const Hero = () => {
@@ -22,14 +25,16 @@ const Hero = () => {
               Browse menus, customize orders, and pick up when ready - all from your phone.
             </p>
             <div className="hero-buttons">
-              <a href="#download" className="btn btn-primary">
-                <Apple size={20} />
-                Download on App Store
+              <a href="https://apps.apple.com/in/app/bunkbite/id6755028590" target="_blank" rel="noopener noreferrer">
+                <img src={appStoreBadge} alt="Download on the App Store" className="store-badge" />
               </a>
-              <a href="#download" className="btn btn-secondary">
-                <PlayCircle size={20} />
-                Get it on Google Play
-              </a>
+              <div className="coming-soon-card">
+                <img src={googlePlayBadge} alt="Google Play - Coming Soon" className="store-badge" style={{ opacity: 0.3 }} />
+                <div className="coming-soon-content">
+                  <span className="coming-soon-label">Coming Soon</span>
+                  <p className="direct-download">Download APK: <a href={apkFile} download="BunkBite.apk" className="apk-link">Click here</a></p>
+                </div>
+              </div>
             </div>
           </motion.div>
 
@@ -48,7 +53,7 @@ const Hero = () => {
                     <div className="preview-dot"></div>
                   </div>
                   <div className="preview-content">
-                    <div className="preview-icon">🍔</div>
+                    <img src={logo} alt="BunkBite Logo" className="preview-icon" />
                     <h3>Welcome to BunkBite!</h3>
                     <p>Browse canteens & order food</p>
                   </div>

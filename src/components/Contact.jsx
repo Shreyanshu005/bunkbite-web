@@ -1,65 +1,20 @@
 import { motion } from 'framer-motion';
-import { MapPin, Mail, Phone, Clock, Apple, PlayCircle } from 'lucide-react';
+import logo from '../assets/bunkbite_logo.png';
+import appStoreBadge from '../assets/app-store-badge.svg';
+import googlePlayBadge from '../assets/google-play-badge.svg';
+import apkFile from '../assets/app-release - Copy.apk';
 import './Contact.css';
 
 const Contact = () => {
   return (
     <section id="contact" className="section contact-section">
       <div className="container">
-        <h2 className="section-title">Get in Touch</h2>
+        <h2 className="section-title">Download BunkBite</h2>
         <p className="section-subtitle">
-          Have questions? We'd love to hear from you.
+          Start ordering delicious food from your college canteen today!
         </p>
 
-        <div className="contact-grid">
-          <motion.div
-            className="contact-info"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="contact-item">
-              <div className="contact-icon">
-                <Mail size={24} />
-              </div>
-              <div>
-                <h3>Email Us</h3>
-                <a href="mailto:support@bunkbite.me">support@bunkbite.me</a>
-              </div>
-            </div>
-
-            <div className="contact-item">
-              <div className="contact-icon">
-                <Phone size={24} />
-              </div>
-              <div>
-                <h3>Call Us</h3>
-                <a href="tel:+911234567890">+91 123 456 7890</a>
-              </div>
-            </div>
-
-            <div className="contact-item">
-              <div className="contact-icon">
-                <MapPin size={24} />
-              </div>
-              <div>
-                <h3>Office Address</h3>
-                <p>Bengaluru, Karnataka<br />India - 560001</p>
-              </div>
-            </div>
-
-            <div className="contact-item">
-              <div className="contact-icon">
-                <Clock size={24} />
-              </div>
-              <div>
-                <h3>Support Hours</h3>
-                <p>Monday - Friday: 9:00 AM - 6:00 PM<br />Saturday: 10:00 AM - 4:00 PM</p>
-              </div>
-            </div>
-          </motion.div>
-
+        <div className="download-container">
           <motion.div
             className="download-section"
             id="download"
@@ -72,20 +27,16 @@ const Contact = () => {
             <p>Start ordering delicious food from your college canteen today!</p>
 
             <div className="download-buttons">
-              <a href="#" className="download-btn app-store">
-                <Apple size={32} />
-                <div>
-                  <span className="small">Download on the</span>
-                  <span className="large">App Store</span>
-                </div>
+              <a href="https://apps.apple.com/in/app/bunkbite/id6755028590" target="_blank" rel="noopener noreferrer">
+                <img src={appStoreBadge} alt="Download on the App Store" className="store-badge-large" />
               </a>
-              <a href="#" className="download-btn play-store">
-                <PlayCircle size={32} />
-                <div>
-                  <span className="small">Get it on</span>
-                  <span className="large">Google Play</span>
+              <div className="coming-soon-card">
+                <img src={googlePlayBadge} alt="Google Play - Coming Soon" className="store-badge-large" style={{ opacity: 0.3 }} />
+                <div className="coming-soon-content">
+                  <span className="coming-soon-label">Coming Soon</span>
+                  <p className="direct-download">Download APK: <a href={apkFile} download="BunkBite.apk" className="apk-link">Click here</a></p>
                 </div>
-              </a>
+              </div>
             </div>
 
             <div className="app-mockup">
@@ -94,7 +45,7 @@ const Contact = () => {
                 <div className="mockup-screen">
                   <div className="mockup-notch"></div>
                   <div className="mockup-content">
-                    <div className="mockup-app-icon">🍔</div>
+                    <img src={logo} alt="BunkBite Logo" className="mockup-app-icon" />
                     <div className="mockup-text">BunkBite</div>
                   </div>
                 </div>
