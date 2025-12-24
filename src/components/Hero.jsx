@@ -31,8 +31,8 @@ const Hero = () => {
               <div className="coming-soon-card">
                 <img src={googlePlayBadge} alt="Google Play - Coming Soon" className="store-badge" style={{ opacity: 0.3 }} />
                 <div className="coming-soon-content">
-                  <span className="coming-soon-label">Coming Soon</span>
-                  <p className="direct-download">Download APK: <a href={apkFile} download="BunkBite.apk" className="apk-link">Click here</a></p>
+                  <span className="coming-soon-label">Coming Soon on Play Store</span>
+                  <p className="direct-download">Want to try now? <a href={apkFile} download="Bunkbite.apk" className="apk-link">Download directly</a></p>
                 </div>
               </div>
             </div>
