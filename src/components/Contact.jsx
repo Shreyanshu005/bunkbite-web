@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import logo from '../assets/bunkbite_logo.png';
 import appStoreBadge from '../assets/app-store-badge.svg';
 import googlePlayBadge from '../assets/google-play-badge.svg';
-import apkFile from '../assets/app-release - Copy.apk';
 import './Contact.css';
 
 const Contact = () => {
@@ -30,13 +29,9 @@ const Contact = () => {
               <a href="https://apps.apple.com/in/app/bunkbite/id6755028590" target="_blank" rel="noopener noreferrer">
                 <img src={appStoreBadge} alt="Download on the App Store" className="store-badge-large" />
               </a>
-              <div className="coming-soon-card">
-                <img src={googlePlayBadge} alt="Google Play - Coming Soon" className="store-badge-large" style={{ opacity: 0.3 }} />
-                <div className="coming-soon-content">
-                  <span className="coming-soon-label">Coming Soon on Play Store</span>
-                  <p className="direct-download">Want to try now? <a href={apkFile} download="Bunkbite.apk" className="apk-link">Download directly</a></p>
-                </div>
-              </div>
+              <a href="https://play.google.com/store/apps/details?id=com.bunkbite.app.canteenapp" target="_blank" rel="noopener noreferrer">
+                <img src={googlePlayBadge} alt="Get it on Google Play" className="store-badge-large" />
+              </a>
             </div>
 
             <div className="app-mockup">
