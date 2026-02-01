@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
-import logo from '../assets/bunkbite_logo.png';
+import logo from '../assets/newlogo.png';
 import appStoreBadge from '../assets/app-store-badge.svg';
 import googlePlayBadge from '../assets/google-play-badge.svg';
+import appScreenshot from '../assets/IMG_1956.jpg';
 import './Hero.css';
 
 const Hero = () => {
@@ -40,19 +41,12 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="phone-mockup">
+              <div className="phone-notch"></div>
+              <div className="phone-button phone-button-left"></div>
+              <div className="phone-button phone-button-right phone-button-right-top"></div>
+              <div className="phone-button phone-button-right phone-button-right-bottom"></div>
               <div className="phone-screen">
-                <div className="app-preview">
-                  <div className="preview-header">
-                    <div className="preview-dot"></div>
-                    <div className="preview-dot"></div>
-                    <div className="preview-dot"></div>
-                  </div>
-                  <div className="preview-content">
-                    <img src={logo} alt="BunkBite Logo" className="preview-icon" />
-                    <h3>Welcome to BunkBite!</h3>
-                    <p>Browse canteens & order food</p>
-                  </div>
-                </div>
+                <img src={appScreenshot} alt="BunkBite App" className="app-screenshot" />
               </div>
             </div>
           </motion.div>

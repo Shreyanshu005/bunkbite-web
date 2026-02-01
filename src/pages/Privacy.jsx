@@ -109,8 +109,7 @@ const Privacy = () => {
             <h2>10. Contact Us</h2>
             <p>If you have questions about this privacy policy, please contact us:</p>
             <ul>
-              <li>Email: <a href="mailto:privacy@bunkbite.me">privacy@bunkbite.me</a></li>
-              <li>Support: <a href="mailto:support@bunkbite.me">support@bunkbite.me</a></li>
+              <li>Email: <a href="mailto:bunkbite58@gmail.com">bunkbite58@gmail.com</a></li>
             </ul>
           </section>
 

@@ -154,8 +154,7 @@ const Terms = () => {
             <h2>13. Contact Information</h2>
             <p>For questions about these Terms, please contact us:</p>
             <ul>
-              <li>Email: <a href="mailto:legal@bunkbite.me">legal@bunkbite.me</a></li>
-              <li>Support: <a href="mailto:support@bunkbite.me">support@bunkbite.me</a></li>
+              <li>Email: <a href="mailto:bunkbite58@gmail.com">bunkbite58@gmail.com</a></li>
             </ul>
           </section>
 

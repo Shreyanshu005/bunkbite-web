@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
-import logo from '../assets/bunkbite_logo.png';
+import logo from '../assets/newlogo.png';
 import appStoreBadge from '../assets/app-store-badge.svg';
 import googlePlayBadge from '../assets/google-play-badge.svg';
+import appScreenshot from '../assets/IMG_1956.jpg';
 import './Contact.css';
 
 const Contact = () => {
@@ -37,12 +38,12 @@ const Contact = () => {
             <div className="app-mockup">
               <div className="mockup-glow"></div>
               <div className="mockup-phone">
+                <div className="mockup-notch"></div>
+                <div className="mockup-button mockup-button-left"></div>
+                <div className="mockup-button mockup-button-right mockup-button-right-top"></div>
+                <div className="mockup-button mockup-button-right mockup-button-right-bottom"></div>
                 <div className="mockup-screen">
-                  <div className="mockup-notch"></div>
-                  <div className="mockup-content">
-                    <img src={logo} alt="BunkBite Logo" className="mockup-app-icon" />
-                    <div className="mockup-text">BunkBite</div>
-                  </div>
+                  <img src={appScreenshot} alt="BunkBite App" className="mockup-screenshot" />
                 </div>
               </div>
             </div>

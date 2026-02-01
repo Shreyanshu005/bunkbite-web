@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail, Github, Twitter, Linkedin } from 'lucide-react';
-import logo from '../assets/bunkbite_logo.png';
+import logo from '../assets/newlogo.png';
 import './Footer.css';
 
 const Footer = () => {
