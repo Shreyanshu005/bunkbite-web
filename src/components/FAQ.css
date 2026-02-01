@@ -3,6 +3,10 @@
   margin: 0 auto;
 }
 
+.faq-section {
+  background: linear-gradient(180deg, #f0fff5 0%, #e6f7ed 100%);
+}
+
 .faq-item {
   background: var(--white);
   border-radius: 12px;

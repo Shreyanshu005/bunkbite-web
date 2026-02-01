@@ -69,7 +69,7 @@ const FAQItem = ({ faq, index }) => {
 
 const FAQ = () => {
   return (
-    <section id="faq" className="section">
+    <section id="faq" className="section faq-section">
       <div className="container">
         <h2 className="section-title">Frequently Asked Questions</h2>
         <p className="section-subtitle">

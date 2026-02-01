@@ -1,7 +1,62 @@
 .hero {
   padding: 140px 0 80px;
-  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f0fff5 50%, #e6f7ed 100%);
   overflow: hidden;
+  position: relative;
+  margin: 20px;
+  border-radius: 32px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin: 16px;
+    border-radius: 24px;
+    padding: 100px 0 60px;
+  }
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(11, 125, 59, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  top: -150px;
+  right: -100px;
+  animation: float 20s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(13, 148, 70, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  bottom: -100px;
+  left: -100px;
+  animation: float 15s ease-in-out infinite reverse;
+  pointer-events: none;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -30px) scale(1.05);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
 }
 
 .hero-content {
@@ -150,7 +205,27 @@
   box-shadow:
     0 0 0 2px #2a2a2a,
     0 0 0 6px #1a1a1a,
-    0 20px 60px rgba(0, 0, 0, 0.4);
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 80px rgba(11, 125, 59, 0.3);
+  animation: phoneGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes phoneGlow {
+  from {
+    box-shadow:
+      0 0 0 2px #2a2a2a,
+      0 0 0 6px #1a1a1a,
+      0 20px 60px rgba(0, 0, 0, 0.4),
+      0 0 80px rgba(11, 125, 59, 0.3);
+  }
+
+  to {
+    box-shadow:
+      0 0 0 2px #2a2a2a,
+      0 0 0 6px #1a1a1a,
+      0 20px 60px rgba(0, 0, 0, 0.4),
+      0 0 100px rgba(13, 148, 70, 0.4);
+  }
 }
 
 .phone-notch {

@@ -1,38 +1,70 @@
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.features-section {
+  background: linear-gradient(180deg, #e6f7ed 0%, #ffffff 100%);
 }
 
 .feature-card {
-  background: var(--white);
-  padding: 40px 30px;
-  border-radius: 20px;
-  box-shadow: var(--shadow-sm);
-  transition: all 0.3s ease;
-  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 40px 32px;
+  border-radius: 24px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.04),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(11, 125, 59, 0.05) 0%, rgba(13, 148, 70, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
 }
 
 .feature-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(11, 125, 59, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+}
+
+.feature-card:hover::before {
+  opacity: 1;
 }
 
 .feature-icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 24px;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #0B7D3B 0%, #0D9446 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
-  color: var(--white);
-  border-radius: 20px;
-  transition: all 0.3s ease;
+  color: white;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 24px rgba(11, 125, 59, 0.3);
+  transition: all 0.4s ease;
 }
 
 .feature-card:hover .feature-icon {
   transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 12px 32px rgba(11, 125, 59, 0.4);
 }
 
 .feature-title {
@@ -43,18 +75,18 @@
 }
 
 .feature-description {
+  font-size: 1rem;
   color: var(--text-gray);
   line-height: 1.7;
-  font-size: 1rem;
 }
 
 @media (max-width: 768px) {
   .features-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 24px;
   }
 
   .feature-card {
-    padding: 30px 20px;
+    padding: 32px 24px;
   }
 }

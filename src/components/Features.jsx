@@ -37,7 +37,7 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="features" className="section">
+    <section id="features" className="section features-section">
       <div className="container">
         <h2 className="section-title">Why Choose BunkBite?</h2>
         <p className="section-subtitle">

@@ -1,5 +1,35 @@
 .contact-section {
-  background: var(--bg-light);
+  background: linear-gradient(180deg, #e6f7ed 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(11, 125, 59, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.5;
+  }
 }
 
 .download-container {
@@ -69,12 +99,18 @@
 }
 
 .download-section {
-  background: var(--white);
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: var(--shadow-md);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 48px 40px;
+  border-radius: 24px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5);
   text-align: center;
   width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
 }
 
 .download-section h3 {
