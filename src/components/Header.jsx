@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
 import logo from '../assets/newlogo.png';
 import './Header.css';
 
@@ -34,28 +33,35 @@ const Header = () => {
             <span className="logo-text">BunkBite</span>
           </Link>
 
+          <div className={`mobile-nav-overlay ${isMobileMenuOpen ? 'active' : ''}`} onClick={() => setIsMobileMenuOpen(false)}></div>
+
           <nav className={`nav ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
-            <button onClick={() => scrollToSection('features')} className="nav-link">
-              Features
-            </button>
-            <button onClick={() => scrollToSection('support')} className="nav-link">
-              Support
-            </button>
-            <button onClick={() => scrollToSection('faq')} className="nav-link">
-              FAQ
-            </button>
-            <button onClick={() => scrollToSection('contact')} className="nav-link">
-              Contact
-            </button>
-            <Link to="/privacy" className="nav-link">Privacy Policy</Link>
-            <Link to="/terms" className="nav-link">Terms</Link>
+            <div className="nav-links-container">
+              <button onClick={() => scrollToSection('features')} className="nav-link nav-link-mobile" style={{ '--i': 1 }}>
+                Features
+              </button>
+              <button onClick={() => scrollToSection('support')} className="nav-link nav-link-mobile" style={{ '--i': 2 }}>
+                Support
+              </button>
+              <button onClick={() => scrollToSection('faq')} className="nav-link nav-link-mobile" style={{ '--i': 3 }}>
+                FAQ
+              </button>
+              <button onClick={() => scrollToSection('contact')} className="nav-link nav-link-mobile" style={{ '--i': 4 }}>
+                Contact
+              </button>
+              <Link to="/privacy" className="nav-link nav-link-mobile" style={{ '--i': 5 }}>Privacy Policy</Link>
+              <Link to="/terms" className="nav-link nav-link-mobile" style={{ '--i': 6 }}>Terms</Link>
+            </div>
           </nav>
 
           <button
-            className="mobile-menu-btn"
+            className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
           </button>
         </div>
       </div>

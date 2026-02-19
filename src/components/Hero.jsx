@@ -12,8 +12,9 @@ const Hero = () => {
         <div className="hero-content">
           <motion.div
             className="hero-text"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             <h1 className="hero-title">
@@ -38,6 +39,7 @@ const Hero = () => {
             className="hero-image"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="phone-mockup">
@@ -46,7 +48,7 @@ const Hero = () => {
               <div className="phone-button phone-button-right phone-button-right-top"></div>
               <div className="phone-button phone-button-right phone-button-right-bottom"></div>
               <div className="phone-screen">
-                <img src={appScreenshot} alt="BunkBite App" className="app-screenshot" />
+                <img src={appScreenshot} alt="BunkBite App" className="app-screenshot" loading="eager" />
               </div>
             </div>
           </motion.div>
