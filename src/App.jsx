@@ -17,7 +17,7 @@ function App() {
     // Simulate loading time for assets (min 2s for smoother feel) or wait for window load
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);

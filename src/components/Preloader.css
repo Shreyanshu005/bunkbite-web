@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #ffffff 0%, #f0fff5 100%);
+    /* background: linear-gradient(135deg, #ffffff 0%, #f0fff5 100%); */
 }
 
 .preloader-content {
@@ -22,7 +22,7 @@
 .preloader-logo {
     width: 120px;
     height: auto;
-    filter: drop-shadow(0 4px 12px rgba(11, 125, 59, 0.2));
+    /* filter: drop-shadow(0 4px 12px rgba(11, 125, 59, 0.2)); */
 }
 
 .loading-dots {

@@ -40,31 +40,21 @@ const Support = () => {
 
         <div className="support-grid">
           {supportOptions.map((option, index) => (
-            <motion.div
+            <div
               key={index}
               className="support-card"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <div className="support-icon">{option.icon}</div>
               <h3 className="support-title">{option.title}</h3>
               <p className="support-description">{option.description}</p>
               <span className="support-action">{option.action}</span>
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        <motion.div
-          className="support-cta"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-        >
+        <div className="support-cta">
           <p>All support features are available in the BunkBite mobile app</p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

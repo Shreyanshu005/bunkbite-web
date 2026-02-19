@@ -15,6 +15,7 @@
   border-radius: 16px;
   box-shadow: var(--shadow-sm);
   transition: all 0.3s ease;
+  will-change: transform;
   text-align: center;
   text-decoration: none;
   display: flex;
